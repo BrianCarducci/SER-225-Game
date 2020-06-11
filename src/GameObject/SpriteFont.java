@@ -121,4 +121,17 @@ public class SpriteFont {
 			drawLocationY += font.getSize();
 		}
 	}
+	
+	public void drawWithBox(GraphicsHandler graphicsHandler) {
+		int drawLocationY = Math.round(this.y);
+		for (String line: text.split("\n")) {
+			if (outlineColor != null && !outlineColor.equals(color)) {
+				graphicsHandler.drawStringWithOutline(line, Math.round(x), drawLocationY, font, color, outlineColor, outlineThickness);
+			} else {
+				graphicsHandler.drawString(line, Math.round(x), drawLocationY, font, color);
+			}
+			drawLocationY += font.getSize();
+		}
+		
+	}
 }
