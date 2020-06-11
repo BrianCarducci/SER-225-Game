@@ -58,6 +58,7 @@ public class Walrus extends NPC {
 
     @Override
     public void drawMessage(GraphicsHandler graphicsHandler) {
+    	int fontSize = message.getFont().getSize();
         graphicsHandler.drawFilledRectangleWithBorder(Math.round(getCalibratedXLocation(map) - 2), Math.round(getCalibratedYLocation(map) - 24), 40, 25, Color.WHITE, Color.BLACK, 2);
         message.setLocation(getCalibratedXLocation(map) + 2, getCalibratedYLocation(map)- 8);
         message.draw(graphicsHandler);

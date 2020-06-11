@@ -32,6 +32,10 @@ public class SpriteFont {
 	public void setText(String text) {
 		this.text = text;
 	}
+	
+	public Font getFont() {
+		return font;
+	}
 
 	public void setFontName(String fontName) {
 		this.font = new Font(fontName, this.font.getStyle(), this.font.getSize());
